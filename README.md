@@ -1,4 +1,4 @@
-# Web Development Project 2 - *Flashcard App*
+# Web Development Project 2 - *Duke Visa Flashcard*
 
 Submitted by: **Dongping Guo**
 
