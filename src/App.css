@@ -20,3 +20,49 @@
   }
 }
 
+.flashcard {
+  height: 250px;
+  color: black;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flashcard.color-0 {
+  background-color: #e4dcff;
+}
+.flashcard.color-1 {
+  background-color: #ffe0e0;
+}
+.flashcard.color-2 {
+  background-color: #d1f7ec;
+}
+.flashcard.color-3 {
+  background-color: #fff5d1;
+}
+.flashcard.color-4 {
+  background-color: #d3ebff;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg)
+}

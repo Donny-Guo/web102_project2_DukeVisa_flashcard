@@ -23,6 +23,23 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(40%);
+  z-index: -1;
 }
 
 h1 {
@@ -38,10 +55,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #191d8d;
   color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: 
+    border-color 0.25s,
+    opacity 0.1s;
 }
 button:hover {
   border-color: #646cff;
@@ -49,4 +68,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+button:active {
+  opacity: 0.7;
 }
